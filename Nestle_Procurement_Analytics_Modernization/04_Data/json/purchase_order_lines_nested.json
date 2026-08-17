@@ -1,0 +1,452 @@
+[
+  {
+    "po_id": "PO-2026-0001",
+    "po_date": "2026-03-27",
+    "supplier_id": "SUP-005",
+    "supplier_name": "Ivory Cocoa Traders SARL",
+    "plant_id": "PLT-07",
+    "buyer_name": "Sofia Rossi",
+    "currency": "USD",
+    "po_status": "Closed",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-001",
+        "material_name": "Cocoa Liquor",
+        "order_qty": 7427,
+        "uom": "KG",
+        "unit_price": 3.59,
+        "line_amount": 26662.93
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Sofia Rossi",
+        "action": "Submitted",
+        "action_date": "2026-03-24"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Amara Fischer",
+        "action": "Approved",
+        "action_date": "2026-03-26"
+      },
+      {
+        "step": 3,
+        "approver_role": "Finance Controller",
+        "approver_name": "Thomas Berger",
+        "action": "Approved",
+        "action_date": "2026-03-29"
+      }
+    ]
+  },
+  {
+    "po_id": "PO-2026-0002",
+    "po_date": "2026-07-04",
+    "supplier_id": "SUP-026",
+    "supplier_name": "EuroCoPack Services Sp. z o.o.",
+    "plant_id": "PLT-08",
+    "buyer_name": "Amara Fischer",
+    "currency": "EUR",
+    "po_status": "Partially Received",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-038",
+        "material_name": "Sachet Packaging Film",
+        "order_qty": 5033,
+        "uom": "EA",
+        "unit_price": 12.81,
+        "line_amount": 64472.73
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Amara Fischer",
+        "action": "Submitted",
+        "action_date": "2026-06-30"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Thomas Berger",
+        "action": "Approved",
+        "action_date": "2026-07-03"
+      }
+    ]
+  },
+  {
+    "po_id": "PO-2026-0003",
+    "po_date": "2026-03-26",
+    "supplier_id": "SUP-011",
+    "supplier_name": "Sumatra Bean Co.",
+    "plant_id": "PLT-09",
+    "buyer_name": "Priya Nair",
+    "currency": "USD",
+    "po_status": "Closed",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-033",
+        "material_name": "Instant Coffee Granules",
+        "order_qty": 3039,
+        "uom": "KG",
+        "unit_price": 12.79,
+        "line_amount": 38868.81
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Priya Nair",
+        "action": "Submitted",
+        "action_date": "2026-03-23"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Sofia Rossi",
+        "action": "Approved",
+        "action_date": "2026-03-24"
+      }
+    ]
+  },
+  {
+    "po_id": "PO-2026-0004",
+    "po_date": "2026-05-07",
+    "supplier_id": "SUP-025",
+    "supplier_name": "ContractPack Manufacturing S.A.",
+    "plant_id": "PLT-10",
+    "buyer_name": "Sofia Rossi",
+    "currency": "USD",
+    "po_status": "Partially Received",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-013",
+        "material_name": "Vanilla Flavor Compound",
+        "order_qty": 8294,
+        "uom": "KG",
+        "unit_price": 20.13,
+        "line_amount": 166958.22
+      },
+      {
+        "po_line_num": 2,
+        "material_id": "MAT-018",
+        "material_name": "Foil Wrapper Roll",
+        "order_qty": 14104,
+        "uom": "EA",
+        "unit_price": 13.5,
+        "line_amount": 190404
+      },
+      {
+        "po_line_num": 3,
+        "material_id": "MAT-018",
+        "material_name": "Foil Wrapper Roll",
+        "order_qty": 22197,
+        "uom": "EA",
+        "unit_price": 13.9,
+        "line_amount": 308538.3
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Sofia Rossi",
+        "action": "Submitted",
+        "action_date": "2026-05-03"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Liu Wei",
+        "action": "Approved",
+        "action_date": "2026-05-06"
+      },
+      {
+        "step": 3,
+        "approver_role": "Finance Controller",
+        "approver_name": "Amara Fischer",
+        "action": "Approved",
+        "action_date": "2026-05-09"
+      }
+    ]
+  },
+  {
+    "po_id": "PO-2026-0005",
+    "po_date": "2026-07-06",
+    "supplier_id": "SUP-016",
+    "supplier_name": "PureVite Nutrients GmbH",
+    "plant_id": "PLT-05",
+    "buyer_name": "Rahul Sharma",
+    "currency": "EUR",
+    "po_status": "Open",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-032",
+        "material_name": "Freeze-Dried Fruit Flavor Mix",
+        "order_qty": 11651,
+        "uom": "KG",
+        "unit_price": 19.62,
+        "line_amount": 228592.62
+      },
+      {
+        "po_line_num": 2,
+        "material_id": "MAT-015",
+        "material_name": "Lecithin Emulsifier",
+        "order_qty": 5806,
+        "uom": "KG",
+        "unit_price": 4.82,
+        "line_amount": 27984.92
+      },
+      {
+        "po_line_num": 3,
+        "material_id": "MAT-015",
+        "material_name": "Lecithin Emulsifier",
+        "order_qty": 8658,
+        "uom": "KG",
+        "unit_price": 4.63,
+        "line_amount": 40086.54
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Rahul Sharma",
+        "action": "Submitted",
+        "action_date": "2026-07-03"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Priya Nair",
+        "action": "Approved",
+        "action_date": "2026-07-06"
+      }
+    ]
+  },
+  {
+    "po_id": "PO-2026-0006",
+    "po_date": "2026-04-02",
+    "supplier_id": "SUP-012",
+    "supplier_name": "Kenya Highlands Coffee Ltd",
+    "plant_id": "PLT-02",
+    "buyer_name": "Daniel Okafor",
+    "currency": "USD",
+    "po_status": "Partially Received",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-012",
+        "material_name": "Freeze-Dried Coffee Extract",
+        "order_qty": 9529,
+        "uom": "KG",
+        "unit_price": 8.77,
+        "line_amount": 83569.33
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Daniel Okafor",
+        "action": "Submitted",
+        "action_date": "2026-03-29"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Sofia Rossi",
+        "action": "Approved",
+        "action_date": "2026-03-31"
+      }
+    ]
+  },
+  {
+    "po_id": "PO-2026-0007",
+    "po_date": "2026-08-10",
+    "supplier_id": "SUP-005",
+    "supplier_name": "Ivory Cocoa Traders SARL",
+    "plant_id": "PLT-09",
+    "buyer_name": "Grace Chen",
+    "currency": "USD",
+    "po_status": "Open",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-002",
+        "material_name": "Cocoa Butter",
+        "order_qty": 12113,
+        "uom": "KG",
+        "unit_price": 6.1,
+        "line_amount": 73889.3
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Grace Chen",
+        "action": "Submitted",
+        "action_date": "2026-08-05"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Thomas Berger",
+        "action": "Approved",
+        "action_date": "2026-08-08"
+      },
+      {
+        "step": 3,
+        "approver_role": "Finance Controller",
+        "approver_name": "Sofia Rossi",
+        "action": "Approved",
+        "action_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "po_id": "PO-2026-0008",
+    "po_date": "2026-02-12",
+    "supplier_id": "SUP-007",
+    "supplier_name": "Amazon Cocoa Cooperative",
+    "plant_id": "PLT-02",
+    "buyer_name": "Priya Nair",
+    "currency": "USD",
+    "po_status": "Closed",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-002",
+        "material_name": "Cocoa Butter",
+        "order_qty": 3178,
+        "uom": "KG",
+        "unit_price": 5.02,
+        "line_amount": 15953.56
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Priya Nair",
+        "action": "Submitted",
+        "action_date": "2026-02-08"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Carlos Mendes",
+        "action": "Approved",
+        "action_date": "2026-02-09"
+      },
+      {
+        "step": 3,
+        "approver_role": "Finance Controller",
+        "approver_name": "Emma Dubois",
+        "action": "Approved",
+        "action_date": "2026-02-11"
+      }
+    ]
+  },
+  {
+    "po_id": "PO-2026-0009",
+    "po_date": "2026-08-10",
+    "supplier_id": "SUP-002",
+    "supplier_name": "Bavarian Dairy Works GmbH",
+    "plant_id": "PLT-10",
+    "buyer_name": "Liu Wei",
+    "currency": "EUR",
+    "po_status": "Open",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-004",
+        "material_name": "Whole Milk Powder",
+        "order_qty": 6127,
+        "uom": "KG",
+        "unit_price": 3.86,
+        "line_amount": 23650.22
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Liu Wei",
+        "action": "Submitted",
+        "action_date": "2026-08-07"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Grace Chen",
+        "action": "Approved",
+        "action_date": "2026-08-08"
+      },
+      {
+        "step": 3,
+        "approver_role": "Finance Controller",
+        "approver_name": "Daniel Okafor",
+        "action": "Approved",
+        "action_date": "2026-08-11"
+      }
+    ]
+  },
+  {
+    "po_id": "PO-2026-0010",
+    "po_date": "2026-07-28",
+    "supplier_id": "SUP-027",
+    "supplier_name": "IndustrialParts Supply Co.",
+    "plant_id": "PLT-02",
+    "buyer_name": "Rahul Sharma",
+    "currency": "EUR",
+    "po_status": "Open",
+    "line_items": [
+      {
+        "po_line_num": 1,
+        "material_id": "MAT-035",
+        "material_name": "Boiler Water Treatment Chemical",
+        "order_qty": 14092,
+        "uom": "LTR",
+        "unit_price": 8.77,
+        "line_amount": 123586.84
+      },
+      {
+        "po_line_num": 2,
+        "material_id": "MAT-022",
+        "material_name": "Water Treatment Chemical Blend",
+        "order_qty": 13835,
+        "uom": "LTR",
+        "unit_price": 9.47,
+        "line_amount": 131017.45
+      }
+    ],
+    "approval_history": [
+      {
+        "step": 1,
+        "approver_role": "Category Buyer",
+        "approver_name": "Rahul Sharma",
+        "action": "Submitted",
+        "action_date": "2026-07-24"
+      },
+      {
+        "step": 2,
+        "approver_role": "Procurement Manager",
+        "approver_name": "Liu Wei",
+        "action": "Approved",
+        "action_date": "2026-07-27"
+      }
+    ]
+  }
+]

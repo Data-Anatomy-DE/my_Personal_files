@@ -1,0 +1,11 @@
+PLANT_ID,PLANT_NAME,PLANT_TYPE,COUNTRY,REGION,CITY
+PLT-01,Nestle Manufacturing Plant - Konolfingen,Manufacturing,CH,EMEA,Konolfingen
+PLT-02,Nestle Factory - York,Manufacturing,UK,EMEA,York
+PLT-03,Nestle Distribution Center - Amsterdam,Distribution Center,NL,EMEA,Amsterdam
+PLT-04,Nestle Manufacturing Plant - Solon Ohio,Manufacturing,US,AMERICAS,Solon
+PLT-05,Nestle Factory - Guarulhos,Manufacturing,BR,AMERICAS,Guarulhos
+PLT-06,Nestle Distribution Center - Monterrey,Distribution Center,MX,AMERICAS,Monterrey
+PLT-07,Nestle Manufacturing Plant - Singapore,Manufacturing,SG,APAC,Singapore
+PLT-08,Nestle Factory - Bangalore,Manufacturing,IN,APAC,Bangalore
+PLT-09,Nestle Manufacturing Plant - Accra,Manufacturing,GH,AFRICA,Accra
+PLT-10,Nestle Distribution Center - Nairobi,Distribution Center,KE,AFRICA,Nairobi

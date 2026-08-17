@@ -1,0 +1,31 @@
+SUPPLIER_ID,SUPPLIER_NAME,SUPPLIER_CATEGORY,COUNTRY,REGION,CITY,PREFERRED_CURRENCY,PAYMENT_TERMS_DAYS,TAX_ID,SUPPLIER_STATUS,RISK_TIER,ONBOARDED_DATE,PRIMARY_CONTACT_EMAIL
+SUP-001,AlpsFresh Dairy Cooperative,Dairy Raw Material,CH,EMEA,Vevey,CHF,30,CH792754901,Inactive,High,2025-09-13,procurement.contact@alpsfreshdairy.com
+SUP-002,Bavarian Dairy Works GmbH,Dairy Raw Material,DE,EMEA,Frankfurt,EUR,45,DE537039763,Active,Low,2022-07-06,procurement.contact@bavariandairyw.com
+SUP-003,Nordic Dairy Partners B.V.,Dairy Raw Material,NL,EMEA,Amsterdam,EUR,45,NL158019333,Active,Medium,2022-08-09,procurement.contact@nordicdairypar.com
+SUP-004,Great Lakes Milk Co.,Dairy Raw Material,US,AMERICAS,Solon,USD,45,US156898936,Active,High,2021-07-27,procurement.contact@greatlakesmilk.com
+SUP-005,Ivory Cocoa Traders SARL,Cocoa & Cocoa Products,CI,AFRICA,Abidjan,USD,90,CI996909144,Active,Low,2023-01-01,procurement.contact@ivorycocoatrad.com
+SUP-006,GhanaCocoa Exports Ltd,Cocoa & Cocoa Products,GH,AFRICA,Accra,USD,60,GH710498186,Active,Low,2024-04-20,procurement.contact@ghanacocoaexpo.com
+SUP-007,Amazon Cocoa Cooperative,Cocoa & Cocoa Products,BR,AMERICAS,Guarulhos,USD,90,BR278348666,Active,Low,2022-12-22,procurement.contact@amazoncocoacoo.com
+SUP-008,West Africa Bean Traders,Cocoa & Cocoa Products,CI,AFRICA,Abidjan,USD,90,CI717481428,Active,High,2025-01-31,procurement.contact@westafricabean.com
+SUP-009,Highland Coffee Growers JSC,Coffee Beans,VN,APAC,Buon Ma Thuot,USD,45,VN815611120,Active,Medium,2024-04-27,procurement.contact@highlandcoffee.com
+SUP-010,Andes Coffee Exporters S.A.,Coffee Beans,CO,AMERICAS,Medellin,USD,30,CO851074392,Active,High,2024-10-15,procurement.contact@andescoffeeexp.com
+SUP-011,Sumatra Bean Co.,Coffee Beans,ID,APAC,Medan,USD,30,ID609857736,Active,Medium,2022-03-17,procurement.contact@sumatrabeanco.com
+SUP-012,Kenya Highlands Coffee Ltd,Coffee Beans,KE,AFRICA,Nairobi,USD,30,KE452593623,Active,Medium,2024-06-23,procurement.contact@kenyahighlands.com
+SUP-013,Sweet Fields Sugar Corp,Sugar & Sweeteners,BR,AMERICAS,Guarulhos,USD,90,BR819219673,Active,Medium,2024-10-31,procurement.contact@sweetfieldssug.com
+SUP-014,EuroSweet Ingredients S.A.,Sugar & Sweeteners,FR,EMEA,Lyon,EUR,90,FR516499601,Active,Low,2022-12-30,procurement.contact@eurosweetingre.com
+SUP-015,Global Flavor Solutions Inc.,Flavors & Additives,US,AMERICAS,Solon,USD,90,US677857231,Active,High,2025-08-08,procurement.contact@globalflavorso.com
+SUP-016,PureVite Nutrients GmbH,Flavors & Additives,DE,EMEA,Frankfurt,EUR,60,DE797159621,Active,Medium,2023-06-02,procurement.contact@purevitenutrie.com
+SUP-017,FlexiPack Solutions GmbH,Packaging - Flexible,DE,EMEA,Frankfurt,EUR,60,DE689915501,Active,Low,2023-02-11,procurement.contact@flexipacksolut.com
+SUP-018,EcoWrap Packaging B.V.,Packaging - Flexible,NL,EMEA,Amsterdam,EUR,30,NL191493797,Active,Medium,2025-07-13,procurement.contact@ecowrappackagi.com
+SUP-019,RigidForm Containers Inc.,Packaging - Rigid,US,AMERICAS,Solon,USD,60,US346062166,Active,Low,2023-11-13,procurement.contact@rigidformconta.com
+SUP-020,Global Carton Co.,Packaging - Rigid,IN,APAC,Bangalore,USD,90,IN953492927,Active,Medium,2022-05-25,procurement.contact@globalcartonco.com
+SUP-021,TransGlobal Logistics Pte Ltd,Logistics & Freight (3PL),SG,APAC,Singapore,USD,45,SG648293325,Active,Medium,2024-10-23,procurement.contact@transgloballog.com
+SUP-022,OceanLink Freight B.V.,Logistics & Freight (3PL),NL,EMEA,Amsterdam,EUR,45,NL968363963,Active,Low,2025-01-04,procurement.contact@oceanlinkfreig.com
+SUP-023,SwiftCargo Forwarders LLC,Logistics & Freight (3PL),US,AMERICAS,Solon,USD,90,US733593660,Active,Medium,2022-07-22,procurement.contact@swiftcargoforw.com
+SUP-024,PanAsia Shipping Lines,Logistics & Freight (3PL),CN,APAC,Shanghai,USD,90,CN168232117,Active,High,2024-08-13,procurement.contact@panasiashippin.com
+SUP-025,ContractPack Manufacturing S.A.,Contract Co-Packing,MX,AMERICAS,Monterrey,USD,90,MX739081952,Active,Medium,2025-10-17,procurement.contact@contractpackma.com
+SUP-026,EuroCoPack Services Sp. z o.o.,Contract Co-Packing,PL,EMEA,Warsaw,EUR,30,PL501485807,Active,Low,2024-10-25,procurement.contact@eurocopackserv.com
+SUP-027,IndustrialParts Supply Co.,MRO & Spares,DE,EMEA,Frankfurt,EUR,30,DE815087526,Pending,Medium,2024-03-01,procurement.contact@industrialpart.com
+SUP-028,MRO Direct Solutions Inc.,MRO & Spares,US,AMERICAS,Solon,USD,60,US444796716,Active,Medium,2025-08-18,procurement.contact@mrodirectsolut.com
+SUP-029,Cape Sugar & Ingredients Ltd,Sugar & Sweeteners,ZA,AFRICA,Durban,USD,60,ZA297784254,Active,Medium,2025-10-08,procurement.contact@capesugaringre.com
+SUP-030,Lagos Packaging Industries,Packaging - Rigid,NG,AFRICA,Lagos,USD,45,NG262867119,Active,Low,2022-09-10,procurement.contact@lagospackaging.com

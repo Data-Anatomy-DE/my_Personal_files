@@ -1,0 +1,41 @@
+MATERIAL_ID,MATERIAL_NAME,MATERIAL_CATEGORY,UOM,STANDARD_COST,CURRENCY,SHELF_LIFE_DAYS,IS_HAZARDOUS
+MAT-001,Cocoa Liquor,Cocoa & Cocoa Products,KG,3.42,USD,365,N
+MAT-002,Cocoa Butter,Cocoa & Cocoa Products,KG,5.54,USD,365,N
+MAT-003,Cocoa Powder 10-12%,Cocoa & Cocoa Products,KG,4.6,USD,545,N
+MAT-004,Whole Milk Powder,Dairy Raw Material,KG,4.03,USD,365,N
+MAT-005,Skimmed Milk Powder,Dairy Raw Material,KG,3.61,USD,365,N
+MAT-006,Whey Protein Concentrate,Dairy Raw Material,KG,4.69,USD,365,N
+MAT-007,Refined White Sugar,Sugar & Sweeteners,KG,0.94,USD,730,N
+MAT-008,Brown Cane Sugar,Sugar & Sweeteners,KG,0.9,USD,730,N
+MAT-009,Glucose Syrup,Sugar & Sweeteners,LTR,1.2,USD,365,N
+MAT-010,Arabica Coffee Beans - Green,Coffee Beans,KG,6.64,USD,545,N
+MAT-011,Robusta Coffee Beans - Green,Coffee Beans,KG,3.37,USD,545,N
+MAT-012,Freeze-Dried Coffee Extract,Coffee Beans,KG,9.48,USD,545,N
+MAT-013,Vanilla Flavor Compound,Flavors & Additives,KG,20.12,USD,365,N
+MAT-014,Vitamin & Mineral Premix,Flavors & Additives,KG,20.79,USD,545,N
+MAT-015,Lecithin Emulsifier,Flavors & Additives,KG,5.1,USD,365,N
+MAT-016,Flexible Laminate Film Roll,Packaging - Flexible,EA,24.5,USD,N/A,N
+MAT-017,Stand-Up Pouch Film,Packaging - Flexible,EA,18.29,USD,N/A,N
+MAT-018,Foil Wrapper Roll,Packaging - Flexible,EA,13.58,USD,N/A,N
+MAT-019,PET Rigid Container 250ml,Packaging - Rigid,EA,0.16,USD,N/A,N
+MAT-020,Glass Jar 400g,Packaging - Rigid,EA,0.54,USD,N/A,N
+MAT-021,Corrugated Shipping Carton,Packaging - Rigid,EA,0.54,USD,N/A,N
+MAT-022,Water Treatment Chemical Blend,MRO & Spares,LTR,9.9,USD,365,Y
+MAT-023,Conveyor Belt Spare Kit,MRO & Spares,EA,205.47,USD,N/A,N
+MAT-024,Filling Line Nozzle Set,MRO & Spares,EA,89.7,USD,N/A,N
+MAT-025,Industrial Pump Seal Kit,MRO & Spares,EA,102.9,USD,N/A,N
+MAT-026,Recycled PET Container 500ml,Packaging - Rigid,EA,0.25,USD,N/A,N
+MAT-027,Kraft Paper Wrapper,Packaging - Flexible,EA,7,USD,N/A,N
+MAT-028,Aseptic Carton Pack 1L,Packaging - Rigid,EA,0.43,USD,N/A,N
+MAT-029,Cane Sugar Syrup Concentrate,Sugar & Sweeteners,LTR,1.66,USD,270,N
+MAT-030,Cocoa Nibs Roasted,Cocoa & Cocoa Products,KG,5.83,USD,365,N
+MAT-031,Lactose Powder,Dairy Raw Material,KG,2.24,USD,545,N
+MAT-032,Freeze-Dried Fruit Flavor Mix,Flavors & Additives,KG,17.26,USD,365,N
+MAT-033,Instant Coffee Granules,Coffee Beans,KG,13.46,USD,545,N
+MAT-034,Conveyor Motor Drive Unit,MRO & Spares,EA,524.73,USD,N/A,N
+MAT-035,Boiler Water Treatment Chemical,MRO & Spares,LTR,8.97,USD,365,Y
+MAT-036,Palm Oil Substitute Blend,Flavors & Additives,LTR,3.56,USD,365,N
+MAT-037,Multi-Layer Barrier Film Roll,Packaging - Flexible,EA,32.36,USD,N/A,N
+MAT-038,Sachet Packaging Film,Packaging - Flexible,EA,11.67,USD,N/A,N
+MAT-039,Cane Molasses,Sugar & Sweeteners,LTR,0.72,USD,545,N
+MAT-040,Filling Line Sensor Kit,MRO & Spares,EA,155.1,USD,N/A,N

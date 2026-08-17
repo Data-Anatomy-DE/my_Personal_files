@@ -1,0 +1,51 @@
+RATING_ID,SUPPLIER_ID,SUPPLIER_NAME,RATING_PERIOD,ON_TIME_DELIVERY_PCT,QUALITY_REJECTION_PCT,RESPONSIVENESS_SCORE,OVERALL_RATING,COMMENTS
+RTG-0001,SUP-002,Bavarian Dairy Works GmbH,2026-Q2,74,7.19,5,D,No issues reported - stable partner
+RTG-0002,SUP-003,Nordic Dairy Partners B.V.,2026-Q2,97.8,6.35,5,D,Consistent on-time performance
+RTG-0003,SUP-004,Great Lakes Milk Co.,2026-Q2,88.1,6.93,4,D,Strong responsiveness on urgent orders
+RTG-0004,SUP-005,Ivory Cocoa Traders SARL,2026-Q1,63.9,1.98,1,D,Improved lead time versus prior quarter
+RTG-0005,SUP-005,Ivory Cocoa Traders SARL,2026-Q2,69.9,7.36,3,D,No issues reported - stable partner
+RTG-0006,SUP-006,GhanaCocoa Exports Ltd,2026-Q2,84.5,2.97,4,C,Documentation delays impacted invoice matching
+RTG-0007,SUP-007,Amazon Cocoa Cooperative,2026-Q1,88.6,3.58,4,C,Consistent on-time performance
+RTG-0008,SUP-007,Amazon Cocoa Cooperative,2026-Q2,66.6,2.36,2,D,Documentation delays impacted invoice matching
+RTG-0009,SUP-008,West Africa Bean Traders,2026-Q2,70.7,5.48,4,D,Strong responsiveness on urgent orders
+RTG-0010,SUP-009,Highland Coffee Growers JSC,2026-Q2,86.9,3.36,5,C,Strong responsiveness on urgent orders
+RTG-0011,SUP-010,Andes Coffee Exporters S.A.,2025-Q4,88.4,6.91,4,D,Improved lead time versus prior quarter
+RTG-0012,SUP-010,Andes Coffee Exporters S.A.,2026-Q1,88.1,3.82,2,C,Improved lead time versus prior quarter
+RTG-0013,SUP-010,Andes Coffee Exporters S.A.,2026-Q2,93.8,2.13,5,B,Documentation delays impacted invoice matching
+RTG-0014,SUP-011,Sumatra Bean Co.,2025-Q4,90,1.25,5,B,Improved lead time versus prior quarter
+RTG-0015,SUP-011,Sumatra Bean Co.,2026-Q1,81.9,2,5,C,Quality issue flagged - under corrective action review
+RTG-0016,SUP-011,Sumatra Bean Co.,2026-Q2,71.3,6.86,5,D,Temperature excursion reported on one shipment
+RTG-0017,SUP-012,Kenya Highlands Coffee Ltd,2026-Q1,68,1.9,1,D,Consistent on-time performance
+RTG-0018,SUP-012,Kenya Highlands Coffee Ltd,2026-Q2,97.5,7.13,3,D,Temperature excursion reported on one shipment
+RTG-0019,SUP-013,Sweet Fields Sugar Corp,2025-Q4,98.5,6.82,4,D,No issues reported - stable partner
+RTG-0020,SUP-013,Sweet Fields Sugar Corp,2026-Q1,74.7,4.72,1,C,Strong responsiveness on urgent orders
+RTG-0021,SUP-013,Sweet Fields Sugar Corp,2026-Q2,81.9,0.69,1,C,Quality issue flagged - under corrective action review
+RTG-0022,SUP-014,EuroSweet Ingredients S.A.,2026-Q2,66.9,0.72,1,D,Strong responsiveness on urgent orders
+RTG-0023,SUP-015,Global Flavor Solutions Inc.,2026-Q1,65.5,5.36,4,D,No issues reported - stable partner
+RTG-0024,SUP-015,Global Flavor Solutions Inc.,2026-Q2,79.7,0.5,4,C,Strong responsiveness on urgent orders
+RTG-0025,SUP-016,PureVite Nutrients GmbH,2025-Q4,67.8,0.52,1,D,Strong responsiveness on urgent orders
+RTG-0026,SUP-016,PureVite Nutrients GmbH,2026-Q1,86.6,5.12,3,D,Temperature excursion reported on one shipment
+RTG-0027,SUP-016,PureVite Nutrients GmbH,2026-Q2,87.9,1.27,2,B,No issues reported - stable partner
+RTG-0028,SUP-017,FlexiPack Solutions GmbH,2026-Q1,80.2,7.02,4,D,Temperature excursion reported on one shipment
+RTG-0029,SUP-017,FlexiPack Solutions GmbH,2026-Q2,63,3.51,1,D,Minor delivery delays noted this period
+RTG-0030,SUP-018,EcoWrap Packaging B.V.,2026-Q1,86.3,6.6,3,D,Consistent on-time performance
+RTG-0031,SUP-018,EcoWrap Packaging B.V.,2026-Q2,96.4,1.02,5,B,Temperature excursion reported on one shipment
+RTG-0032,SUP-019,RigidForm Containers Inc.,2026-Q2,84.9,5.3,4,D,Improved lead time versus prior quarter
+RTG-0033,SUP-020,Global Carton Co.,2026-Q1,66.4,5.12,2,D,Minor delivery delays noted this period
+RTG-0034,SUP-020,Global Carton Co.,2026-Q2,97,2.27,2,B,Quality issue flagged - under corrective action review
+RTG-0035,SUP-021,TransGlobal Logistics Pte Ltd,2026-Q1,85.9,4.36,3,C,Temperature excursion reported on one shipment
+RTG-0036,SUP-021,TransGlobal Logistics Pte Ltd,2026-Q2,68.2,3.59,4,D,No issues reported - stable partner
+RTG-0037,SUP-022,OceanLink Freight B.V.,2026-Q1,87.1,5.61,2,D,Temperature excursion reported on one shipment
+RTG-0038,SUP-022,OceanLink Freight B.V.,2026-Q2,89,1.47,4,B,No issues reported - stable partner
+RTG-0039,SUP-023,SwiftCargo Forwarders LLC,2026-Q1,66.7,4.66,5,D,Strong responsiveness on urgent orders
+RTG-0040,SUP-023,SwiftCargo Forwarders LLC,2026-Q2,79,6.36,5,D,Documentation delays impacted invoice matching
+RTG-0041,SUP-024,PanAsia Shipping Lines,2026-Q1,99.4,2.74,1,B,Strong responsiveness on urgent orders
+RTG-0042,SUP-024,PanAsia Shipping Lines,2026-Q2,95.8,0.77,4,A,Minor delivery delays noted this period
+RTG-0043,SUP-025,ContractPack Manufacturing S.A.,2026-Q1,63.3,3.56,1,D,Minor delivery delays noted this period
+RTG-0044,SUP-025,ContractPack Manufacturing S.A.,2026-Q2,64.5,4.43,2,D,Documentation delays impacted invoice matching
+RTG-0045,SUP-026,EuroCoPack Services Sp. z o.o.,2026-Q2,70.6,1.73,5,C,Improved lead time versus prior quarter
+RTG-0046,SUP-027,IndustrialParts Supply Co.,2026-Q1,78.1,0.98,2,C,Minor delivery delays noted this period
+RTG-0047,SUP-027,IndustrialParts Supply Co.,2026-Q2,83.4,5.03,2,D,Strong responsiveness on urgent orders
+RTG-0048,SUP-028,MRO Direct Solutions Inc.,2025-Q4,78.7,1.58,1,C,Minor delivery delays noted this period
+RTG-0049,SUP-028,MRO Direct Solutions Inc.,2026-Q1,67.9,5.63,3,D,No issues reported - stable partner
+RTG-0050,SUP-028,MRO Direct Solutions Inc.,2026-Q2,87.7,5.16,3,D,Consistent on-time performance

@@ -1,0 +1,31 @@
+ONBOARDING_ID,SUPPLIER_ID,SUPPLIER_NAME,ONBOARDING_STAGE,COMPLIANCE_CHECK_FSSC22000,COMPLIANCE_CHECK_ISO9001,COMPLIANCE_CHECK_SEDEX,SUSTAINABILITY_SCORE,BANK_VERIFICATION_STATUS,ONBOARDING_START_DATE,ONBOARDING_COMPLETION_DATE,APPROVED_BY
+ONB-0001,SUP-001,AlpsFresh Dairy Cooperative,Rejected,N,N,N,63,Failed,2025-08-11,2025-09-05,
+ONB-0002,SUP-002,Bavarian Dairy Works GmbH,Approved,Y,Y,N,78,Verified,2022-05-23,2022-06-24,Sofia Rossi
+ONB-0003,SUP-003,Nordic Dairy Partners B.V.,Approved,Y,Y,Y,93,Verified,2022-06-10,2022-07-05,Rahul Sharma
+ONB-0004,SUP-004,Great Lakes Milk Co.,Approved,Y,Y,Y,76,Verified,2021-06-12,2021-07-01,Amara Fischer
+ONB-0005,SUP-005,Ivory Cocoa Traders SARL,Approved,Y,Y,Y,40,Verified,2022-11-29,2023-01-12,Rahul Sharma
+ONB-0006,SUP-006,GhanaCocoa Exports Ltd,Approved,Y,Y,Y,95,Verified,2024-03-13,2024-04-03,Miguel Torres
+ONB-0007,SUP-007,Amazon Cocoa Cooperative,Approved,Y,Y,Y,86,Verified,2022-11-20,2022-12-16,Miguel Torres
+ONB-0008,SUP-008,West Africa Bean Traders,Approved,Y,Y,Y,52,Verified,2024-12-27,2025-01-25,Julia Novak
+ONB-0009,SUP-009,Highland Coffee Growers JSC,Approved,Y,Y,Y,43,Verified,2024-04-07,2024-04-28,Miguel Torres
+ONB-0010,SUP-010,Andes Coffee Exporters S.A.,Approved,Y,Y,Y,55,Verified,2024-09-18,2024-10-19,Rahul Sharma
+ONB-0011,SUP-011,Sumatra Bean Co.,Approved,Y,Y,Y,66,Verified,2022-01-21,2022-02-19,Sofia Rossi
+ONB-0012,SUP-012,Kenya Highlands Coffee Ltd,Approved,Y,Y,Y,79,Verified,2024-06-01,2024-07-16,Priya Nair
+ONB-0013,SUP-013,Sweet Fields Sugar Corp,Approved,Y,Y,Y,42,Verified,2024-09-10,2024-10-20,Miguel Torres
+ONB-0014,SUP-014,EuroSweet Ingredients S.A.,Approved,Y,Y,N,76,Verified,2022-11-09,2022-12-16,Daniel Okafor
+ONB-0015,SUP-015,Global Flavor Solutions Inc.,Approved,Y,Y,N,49,Verified,2025-06-15,2025-07-14,Priya Nair
+ONB-0016,SUP-016,PureVite Nutrients GmbH,Approved,Y,Y,Y,50,Verified,2023-04-24,2023-05-11,Julia Novak
+ONB-0017,SUP-017,FlexiPack Solutions GmbH,Approved,Y,Y,Y,59,Verified,2023-01-16,2023-02-17,Miguel Torres
+ONB-0018,SUP-018,EcoWrap Packaging B.V.,Approved,Y,Y,Y,81,Verified,2025-05-22,2025-06-08,Carlos Mendes
+ONB-0019,SUP-019,RigidForm Containers Inc.,Approved,Y,Y,Y,42,Verified,2023-09-20,2023-10-28,Priya Nair
+ONB-0020,SUP-020,Global Carton Co.,Approved,Y,Y,Y,42,Verified,2022-04-15,2022-05-19,Rahul Sharma
+ONB-0021,SUP-021,TransGlobal Logistics Pte Ltd,Approved,Y,Y,Y,96,Verified,2024-10-03,2024-10-20,Miguel Torres
+ONB-0022,SUP-022,OceanLink Freight B.V.,Approved,Y,Y,Y,68,Verified,2024-11-30,2025-01-09,Liu Wei
+ONB-0023,SUP-023,SwiftCargo Forwarders LLC,Approved,Y,Y,Y,96,Verified,2022-06-17,2022-07-21,Thomas Berger
+ONB-0024,SUP-024,PanAsia Shipping Lines,Approved,Y,Y,Y,84,Verified,2024-07-22,2024-08-15,Emma Dubois
+ONB-0025,SUP-025,ContractPack Manufacturing S.A.,Approved,Y,Y,N,59,Verified,2025-09-18,2025-10-27,Daniel Okafor
+ONB-0026,SUP-026,EuroCoPack Services Sp. z o.o.,Approved,Y,Y,Y,58,Verified,2024-10-01,2024-10-24,Miguel Torres
+ONB-0027,SUP-027,IndustrialParts Supply Co.,Compliance Review,Y,N,N,74,Pending,2024-02-01,,
+ONB-0028,SUP-028,MRO Direct Solutions Inc.,Approved,Y,Y,Y,57,Verified,2025-06-26,2025-07-15,Grace Chen
+ONB-0029,SUP-029,Cape Sugar & Ingredients Ltd,Approved,Y,Y,Y,82,Verified,2025-09-17,2025-10-24,Rahul Sharma
+ONB-0030,SUP-030,Lagos Packaging Industries,Approved,Y,Y,N,61,Verified,2022-07-22,2022-08-14,Sofia Rossi
