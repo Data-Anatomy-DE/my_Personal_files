@@ -19,6 +19,7 @@ A note on how to use this: the goal in a technical interview is to demonstrate y
 9. [dbt — Concepts, Testing, Incremental Models](#9-dbt--concepts-testing-incremental-models)
 10. [SQL Scenarios — CTEs, Subqueries, Joins, Window Functions](#10-sql-scenarios--ctes-subqueries-joins-window-functions)
 11. [AWS S3 Fundamentals for Data Engineering](#11-aws-s3-fundamentals-for-data-engineering)
+12. [Query Debugging & Performance Tuning](#12-query-debugging--performance-tuning)
 
 ---
 
@@ -448,6 +449,25 @@ A Storage Integration lets Snowflake assume an IAM role to access S3, instead of
 
 **Q108. How would you design an S3 prefix/partitioning layout for a large, frequently-loaded raw zone?**
 Partition by a natural, coarse-to-fine time hierarchy (e.g., `s3://bucket/source_system/year=2026/month=08/day=30/`), which supports efficient lifecycle policies (e.g., transition older raw data to cheaper storage classes) and makes it easy to reprocess or audit a specific date range without scanning the entire bucket.
+
+---
+
+## 12. Query Debugging & Performance Tuning
+
+**Q109. Walk through how you'd debug a long-running query in Snowflake, and what performance-tuning steps you'd take.**
+
+Treat it as a methodical process, not a grab-bag of tricks — the structure of the answer matters as much as the tricks themselves:
+
+1. **Confirm what's actually slow.** In Snowsight's Query History, check the split between **queued** time and **execution** time. If a query spent 4 minutes queued and 10 seconds executing, the problem is warehouse concurrency/sizing, not the SQL — and no amount of query rewriting fixes that.
+2. **Open the Query Profile.** This is the single most important tool — it's a visual DAG of every operator (scan, join, aggregate, sort) with the % of total time each consumed. Go straight to the most expensive node rather than eyeballing the whole SQL text.
+3. **Check for spilling.** The profile shows "Bytes spilled to local storage" and "to remote storage." Spilling means the warehouse ran out of memory for a sort/join/aggregation and had to page to disk (remote spill is much worse than local). Fix: a bigger warehouse (more memory per node), or reduce the working set (filter/aggregate earlier, select fewer columns before the expensive join).
+4. **Check partition pruning.** Compare "partitions scanned" vs. "partitions total" on the scan operator. Scanning far more than expected usually means either a missing/ineffective clustering key on a huge table, or a filter that isn't "sargable" — e.g., `WHERE TO_DATE(created_at) = '2026-08-30'` prevents pruning on `created_at`, while `WHERE created_at >= '2026-08-30' AND created_at < '2026-08-31'` allows it.
+5. **Check for join explosion or skew.** Watch "rows produced" jump abnormally at a join node (a missed join key or an unintended many-to-many relationship), or one partition/key dominating the work (e.g., one vendor with 40% of all rows), which causes uneven work distribution across the warehouse's compute nodes.
+6. **Check for repeated recomputation.** A CTE referenced multiple times isn't automatically materialized — if it's expensive and reused, materializing it into a temp table (or a Dynamic Table if it's a recurring production pattern) can turn N recomputations into one.
+7. **Change one thing at a time and compare like-for-like.** Don't resize the warehouse *and* rewrite the query *and* add a clustering key in the same test — you won't know which change actually helped. Compare bytes scanned / partitions scanned / credits used across runs, not just wall-clock time (a second run can look faster purely from warm caching, which can mislead you into crediting the wrong fix).
+8. **Close the loop.** Once you've found the fix, document the root cause (e.g., "missing pruning on `order_date` due to a wrapped filter") so the same query — or the next person's similar one — doesn't get re-debugged from scratch.
+
+*Analogy:* It's like diagnosing why a delivery is late — first check if the truck is stuck in the depot waiting for a dock (queueing) before you start investigating the delivery route (execution). Interviewers are usually listening for exactly that discipline — confirm where the time is actually going before reaching for a fix.
 
 ---
 
