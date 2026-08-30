@@ -4,7 +4,39 @@
 
 Snowflake is a cloud-native data platform (available on AWS, Azure, and GCP) delivered as a fully-managed SaaS — there's no infrastructure to patch, tune, or scale manually. Its defining architectural idea is separating **storage**, **compute**, and **cloud services** into independent layers, so you can scale any one of them without touching the others.
 
-## 2. Key features, at a glance
+## 2. Architecture — the three layers
+
+Snowflake's architecture is the reason most of its features (independent scaling, cloning, time travel, concurrency without contention) are possible at all. It's built as three physically separate layers:
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  CLOUD SERVICES                                          │
+│  Query optimization · Metadata · Security/RBAC ·         │
+│  Transaction management · Result cache                   │
+└─────────────────────────────────────────────────────────┘
+              │                    │                │
+┌─────────────▼───────┐ ┌──────────▼─────────┐ ┌────▼──────────────┐
+│  COMPUTE             │ │  COMPUTE            │ │  COMPUTE           │
+│  Warehouse: TRANSFORM│ │  Warehouse: BI_WH   │ │  Warehouse: ADHOC  │
+│  (ETL/dbt jobs)      │ │  (dashboards)       │ │  (analyst queries) │
+└─────────────┬────────┘ └──────────┬──────────┘ └─────┬──────────────┘
+              │                    │                    │
+              └────────────────────┼────────────────────┘
+                                   ▼
+                    ┌───────────────────────────────┐
+                    │  STORAGE                      │
+                    │  Centralized, compressed,      │
+                    │  columnar micro-partitions     │
+                    └───────────────────────────────┘
+```
+
+- **Storage layer** — all table data, held once, compressed and automatically organized into micro-partitions (roughly 50–500MB, columnar, with min/max metadata per partition used for pruning). You don't manage files or partitions directly.
+- **Compute layer** — one or more independent **virtual warehouses**, each an isolated MPP cluster. Every warehouse reads the *same* storage layer, but they don't share compute resources or contend with each other — a heavy nightly `dbt build` on `TRANSFORM_WH` doesn't slow down analysts querying `BI_WH` at the same moment.
+- **Cloud services layer** — the "brain": query parsing/optimization, metadata management, access control (RBAC), transaction consistency, and the result cache. This layer is fully managed by Snowflake and shared across the whole account.
+
+**Why the separation matters in practice:** because compute is decoupled from storage, you can size (or add) a warehouse purely for a workload's needs and suspend it the moment it's idle, without ever duplicating or moving the underlying data — the same procurement data can be read simultaneously by a transformation job, a BI tool, and a data scientist's notebook, each on its own right-sized, independently-billed compute, with zero risk of one workload starving another.
+
+## 3. Key features, at a glance
 
 - **Multi-cluster shared data architecture** — many independent virtual warehouses can query the same underlying data concurrently without contention.
 - **Virtual Warehouses** — compute clusters (sized XS–6XL) that can auto-suspend/auto-resume and scale independently; billed per-second while running.
@@ -18,9 +50,9 @@ Snowflake is a cloud-native data platform (available on AWS, Azure, and GCP) del
 - **Snowflake Cortex** — LLM and AI functions callable directly from SQL (summarize, translate, classify, semantic search) without moving data out of the platform.
 - **Role-Based Access Control (RBAC)** — fine-grained privilege model; access is granted to roles, roles to users, and roles can inherit from other roles.
 
-## 3. How to configure Snowflake — step by step
+## 4. How to configure Snowflake — step by step
 
-### 3.1 Warehouses, databases, and schemas
+### 4.1 Warehouses, databases, and schemas
 
 ```sql
 -- as ACCOUNTADMIN or SYSADMIN
@@ -39,7 +71,7 @@ CREATE SCHEMA PROCUREMENT_DB.ANALYTICS;
 
 A common, sane organizing convention: `RAW` (landed as-is), `STAGING` (lightly cleaned, 1:1 with sources), `ANALYTICS` (final modeled facts/dimensions) — this maps directly onto how a dbt project is structured (Guide 01).
 
-### 3.2 Roles & access (don't run everything as ACCOUNTADMIN)
+### 4.2 Roles & access (don't run everything as ACCOUNTADMIN)
 
 ```sql
 CREATE ROLE TRANSFORM_ROLE;
@@ -62,7 +94,7 @@ GRANT ROLE TRANSFORM_ROLE TO USER DBT_SERVICE_USER;
 
 The principle: grant privileges to **roles**, not directly to users, and grant roles to users — so access changes are managed by re-assigning roles, not hunting down every individual grant a person has.
 
-### 3.3 Cost governance
+### 4.3 Cost governance
 
 ```sql
 CREATE RESOURCE MONITOR MONTHLY_ETL_BUDGET
@@ -74,11 +106,11 @@ CREATE RESOURCE MONITOR MONTHLY_ETL_BUDGET
 ALTER WAREHOUSE TRANSFORM_WH SET RESOURCE_MONITOR = MONTHLY_ETL_BUDGET;
 ```
 
-### 3.4 Loading data in (recap)
+### 4.4 Loading data in (recap)
 
 Data typically lands via an external **stage** (pointing at S3/Azure Blob/GCS — see Guide 04 for the full S3 setup) and a `COPY INTO` statement, or continuously via **Snowpipe**. See the interview Q&A document for the deeper mechanics of `COPY INTO` error handling.
 
-### 3.5 A sensible baseline structure
+### 4.5 A sensible baseline structure
 
 ```
 PROCUREMENT_DB
@@ -89,6 +121,6 @@ PROCUREMENT_DB
 
 Paired with `DEV`/`PROD` database-level (or schema-level) separation so developers can safely build and test without touching production tables.
 
-## 4. Why teams pick Snowflake over "just running Postgres/a bigger server"
+## 5. Why teams pick Snowflake over "just running Postgres/a bigger server"
 
 The separated storage/compute model means you don't provision for peak load all day — a huge nightly transformation job can spin up a large warehouse for 20 minutes and suspend immediately, while a small BI warehouse serves dashboards all day at a fraction of the cost, both against the exact same data with zero contention between them. That elasticity, combined with near-zero operational maintenance (no indexes to tune, no vacuuming, automatic scaling), is the core pitch.

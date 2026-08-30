@@ -97,17 +97,17 @@ Using this very project (`Nestle_Procurement_Analytics_Modernization`) as the ru
 git clone https://github.com/Data-Anatomy-DE/my_Personal_files.git
 cd my_Personal_files/Nestle_Procurement_Analytics_Modernization
 
-git switch -c feature/add-vendor-scd2-snapshot   # 1. branch off before touching anything
-# ...edit/add a dbt snapshot file for dim_vendor...
+git switch -c feature/add-supplier-scd2-snapshot   # 1. branch off before touching anything
+# ...edit/add a dbt snapshot file for supplier_snapshot...
 git status                                        # 2. see what changed
-git add snapshots/dim_vendor_snapshot.sql          # 3. stage just that file
-git commit -m "Add SCD2 snapshot for dim_vendor"    # 4. commit with a clear message
-git push -u origin feature/add-vendor-scd2-snapshot  # 5. push the branch to GitHub
+git add snapshots/supplier_snapshot.sql            # 3. stage just that file
+git commit -m "Add SCD2 snapshot for supplier_master"    # 4. commit with a clear message
+git push -u origin feature/add-supplier-scd2-snapshot  # 5. push the branch to GitHub
 # 6. open a Pull Request on GitHub, get it reviewed
 # 7. once approved and merged, clean up:
 git switch main
 git pull origin main
-git branch -d feature/add-vendor-scd2-snapshot
+git branch -d feature/add-supplier-scd2-snapshot
 ```
 
 ## 9. Why this actually matters for a data engineer specifically

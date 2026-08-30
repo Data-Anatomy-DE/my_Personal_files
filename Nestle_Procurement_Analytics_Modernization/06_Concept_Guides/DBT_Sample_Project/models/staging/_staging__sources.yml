@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw_procurement
+    database: PROCUREMENT_DB
+    schema: RAW
+    tables:
+      - name: purchase_orders
+        description: "Raw purchase order lines, one row per PO line, landed as-is."
+        loaded_at_field: _loaded_at
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
+
+      - name: supplier_master
+        description: "Raw supplier master data, current state only (no history)."

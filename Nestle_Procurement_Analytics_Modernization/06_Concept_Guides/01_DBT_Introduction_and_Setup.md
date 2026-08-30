@@ -94,7 +94,7 @@ procurement_analytics/
 | **`dbt_project.yml`** | The project's master config: its name, which `profiles.yml` profile to use, default materializations, and file paths. This is *the* file dbt reads first. |
 | **`models/`** | The heart of the project — your transformation SQL files. Each `.sql` file is one model (one `SELECT`, no need to write `CREATE TABLE` yourself). Convention (not auto-created, but near-universal) is to organize this into `staging/` (light cleanup of raw sources, roughly 1:1 with source tables), `intermediate/` (reusable building-block logic), and `marts/` (final, business-facing fact/dimension tables) — e.g., `models/staging/stg_purchase_orders.sql` → `models/marts/fact_procurement_spend.sql`. |
 | **`seeds/`** | Small, static CSV files you want loaded as tables via `dbt seed` — e.g., a manually maintained country-code or currency-code lookup. Not for large or frequently changing data. |
-| **`snapshots/`** | Definitions for capturing **SCD Type 2** history over time from a source that only exposes current state (e.g., snapshotting `raw.vendors` so you can see a vendor's risk-tier history, not just today's value). |
+| **`snapshots/`** | Definitions for capturing **SCD Type 2** history over time from a source that only exposes current state (e.g., snapshotting `raw.supplier_master` so you can see a supplier's risk-tier history, not just today's value). |
 | **`tests/`** | **Singular tests** — one-off `.sql` files, each a custom assertion query that should return zero rows if the rule holds (generic, reusable tests like `not_null`/`unique` instead live in YAML next to the model). |
 | **`macros/`** | Reusable Jinja+SQL snippets (like functions) — e.g., a standard way to build a surrogate key hash, used consistently across every model instead of copy-pasted with small variations. |
 | **`analyses/`** | Ad hoc SQL you want dbt to compile (so it can use `ref()`/Jinja) but never actually materialize as a table/view in the warehouse — one-off investigative queries. |
@@ -140,11 +140,11 @@ models:
     columns:
       - name: po_line_id
         tests: [unique, not_null]
-      - name: vendor_id
+      - name: supplier_id
         tests:
           - relationships:
-              to: ref('dim_vendor')
-              field: vendor_id
+              to: ref('dim_supplier')
+              field: supplier_id
 ```
 
 ## 8. `ref()` and `source()` — the two most important functions in dbt
@@ -158,14 +158,18 @@ Why this matters so much: every `ref()`/`source()` call is how dbt automatically
 -- models/marts/fact_procurement_spend.sql
 select
     po.po_line_id,
-    po.vendor_id,
-    v.vendor_name,
+    po.supplier_id,
+    s.supplier_name,
     po.line_amount,
     po.order_date
 from {{ ref('stg_purchase_orders') }} po
-left join {{ ref('dim_vendor') }} v
-    on po.vendor_id = v.vendor_id
+left join {{ ref('dim_supplier') }} s
+    on po.supplier_id = s.supplier_id
 ```
+
+A full, real, runnable version of this pattern — actual files, not just snippets — lives in
+[`DBT_Sample_Project/`](DBT_Sample_Project/) next to this guide, built against the real sample data in
+`04_Data/csv`.
 
 ## 9. Running the project
 

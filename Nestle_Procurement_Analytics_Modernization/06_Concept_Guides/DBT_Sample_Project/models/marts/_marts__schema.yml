@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_supplier
+    description: "One row per supplier, current attributes only (see supplier_snapshot for history)."
+    columns:
+      - name: supplier_key
+        description: "Surrogate key, hashed from supplier_id."
+        tests: [unique, not_null]
+      - name: supplier_id
+        tests: [unique, not_null]
+      - name: risk_tier
+        tests:
+          - accepted_values:
+              values: ['Low', 'Medium', 'High']
+
+  - name: fact_procurement_spend
+    description: "One row per purchase order line — grain: po_id + po_line_num."
+    columns:
+      - name: po_id
+        tests: [not_null]
+      - name: po_line_num
+        tests: [not_null]
+      - name: supplier_id
+        tests:
+          - relationships:
+              to: ref('dim_supplier')
+              field: supplier_id
+      - name: line_amount
+        tests: [not_null]
+
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - po_id
+            - po_line_num
